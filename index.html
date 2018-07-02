@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  
+  function setSessionItem(cpyKey, group) {
+  try {
+  if (typeof(sessionStorage) !== "undefined") {
+  sessionStorage.setItem(cpyKey, group);
+  }
+  } catch (error) {
+  if (error == QUOTA_EXCEEDED_ERR) {
+  console.log("Error: Session Storage limit exceeds.");
+  } else {
+  console.log("Error: Saving to session storage.");
+  }
+  }
+  }
+  
+  function getSessionItem(cpyKey) {
+  try {
+  if (typeof(sessionStorage) !== "undefined") {
+  return sessionStorage.getItem(cpyKey);
+  }
+  return "";
+  } catch (error) {
+  console.log("Session Storage Error :GET: " + error);
+  return "";
+  }
+  }
+function cpyKey(){
+  return cpykey = 123;
+  
+  }
+  function entitlementGroupId(){
+  return group = 'grp';
+  }
+  
+  var cpykeyvalue = cpyKey();
+  var groupvalue = entitlementGroupId();
+  function returnTemp() {
+  var tempStorage = new Array();
+  return tempStorage['cpykeyvalue'] = 'groupvalue';
+  }
+  
+  var tempsessionStorage = returnTemp();
+
+console.log(tempsessionStorage);
+setSessionItem(cpykeyvalue, groupvalue);
+getSessionItem(cpykeyvalue);
+
+// var sidekicks = [
+//     { name: "Robin",     hero: "Batman"   },
+//     { name: "Supergirl", hero: "Superman" },
+//     { name: "Oracle",    hero: "Batman"   },
+//     { name: "Krypto",    hero: "Superman" }
+// ];
+
+// var batKicks = sidekicks.filter(function (el) {
+//     return (el.hero === "Batman");
+// });
+
+
+// console.log(batKicks)
+  </script>
+</body>
+</html>
