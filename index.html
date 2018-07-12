@@ -8,7 +8,33 @@
 </head>
 <body>
   <script>
-  
+  /*
+  // click out and in
+  document.addEventListener("click", function (e) {
+    //console.log("dsa",e.target);
+  // console.log("dsssss",event.target.classList.contains('filter'),event.target.classList.contains('icon-lock'))
+    
+      if (!(event.target.classList.contains('filter') && event.target.classList.contains('icon-lock') )) {
+          //console.log("dsada");
+         var myDropdown = document.getElementById("filter-menu");
+         if (myDropdown.classList.contains('show')) {
+             // myDropdown.classList.toggle('show');
+             myDropdown.classList.remove('show');
+         }
+    
+     }
+        
+ }, false);
+
+setTimeout(function(){
+    var except = document.getElementById('filter-menu');
+    except.addEventListener("click", function (ev) {
+        // alert("except");
+        ev.stopPropagation(); //this is important! If removed, you'll get both alerts
+    }, false);
+},10000)   
+
+  */
   function setSessionItem(cpyKey, group) {
   try {
   if (typeof(sessionStorage) !== "undefined") {
